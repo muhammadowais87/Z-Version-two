@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hyperliquid-inspired Design System
+   Deep teal/green backgrounds with mint/cyan accents
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 168 35% 96%;
+    --foreground: 170 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 170 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 170 50% 10%;
+
+    --primary: 165 82% 45%;
+    --primary-foreground: 170 50% 8%;
+    --primary-glow: 165 85% 60%;
+
+    --secondary: 170 45% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 168 25% 92%;
+    --muted-foreground: 170 30% 40%;
+
+    --accent: 165 90% 50%;
+    --accent-foreground: 170 50% 8%;
+
+    --success: 165 82% 45%;
+    --success-foreground: 170 50% 8%;
+    --success-glow: 165 85% 60%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 168 30% 88%;
+    --input: 168 30% 90%;
+    --ring: 165 82% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-vibrant: linear-gradient(135deg, hsl(165 82% 45%), hsl(170 60% 35%));
+    --gradient-success: linear-gradient(135deg, hsl(165 82% 45%), hsl(165 85% 60%));
+    --gradient-purple: linear-gradient(135deg, hsl(170 45% 25%), hsl(165 82% 45%));
+    --gradient-pink: linear-gradient(135deg, hsl(165 90% 50%), hsl(170 70% 40%));
+    --gradient-hyper: linear-gradient(135deg, hsl(170 50% 12%), hsl(168 45% 18%), hsl(165 50% 25%));
+    --gradient-blob: radial-gradient(ellipse at 30% 20%, hsl(165 50% 30% / 0.6), transparent 50%),
+                     radial-gradient(ellipse at 70% 60%, hsl(165 60% 35% / 0.5), transparent 50%),
+                     radial-gradient(ellipse at 50% 80%, hsl(170 45% 25% / 0.4), transparent 50%);
+    
+    --shadow-glow: 0 10px 40px -10px hsl(165 82% 45% / 0.4);
+    --shadow-success: 0 10px 40px -10px hsl(165 82% 45% / 0.4);
+    --shadow-pink: 0 10px 40px -10px hsl(165 90% 50% / 0.4);
+    --shadow-mint: 0 0 60px hsl(165 85% 60% / 0.3);
+
+    --sidebar-background: 168 35% 96%;
+    --sidebar-foreground: 170 30% 25%;
+    --sidebar-primary: 165 82% 45%;
+    --sidebar-primary-foreground: 170 50% 8%;
+    --sidebar-accent: 168 25% 92%;
+    --sidebar-accent-foreground: 170 30% 25%;
+    --sidebar-border: 168 30% 88%;
+    --sidebar-ring: 165 82% 45%;
+
+    --chart-1: 165 82% 45%;
+    --chart-2: 170 60% 35%;
+    --chart-3: 165 90% 50%;
+    --chart-4: 170 45% 25%;
+    --chart-5: 168 70% 55%;
+  }
+
+  .dark {
+    --background: 170 50% 6%;
+    --foreground: 165 30% 95%;
+
+    --card: 170 45% 10%;
+    --card-foreground: 165 30% 95%;
+
+    --popover: 170 45% 10%;
+    --popover-foreground: 165 30% 95%;
+
+    --primary: 165 82% 55%;
+    --primary-foreground: 170 50% 8%;
+    --primary-glow: 165 85% 65%;
+
+    --secondary: 170 40% 18%;
+    --secondary-foreground: 165 30% 95%;
+
+    --muted: 170 40% 12%;
+    --muted-foreground: 165 25% 60%;
+
+    --accent: 165 90% 55%;
+    --accent-foreground: 170 50% 8%;
+
+    --success: 165 82% 55%;
+    --success-foreground: 170 50% 8%;
+    --success-glow: 165 85% 65%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 170 35% 15%;
+    --input: 170 35% 15%;
+    --ring: 165 82% 55%;
+    
+    --gradient-vibrant: linear-gradient(135deg, hsl(165 82% 55%), hsl(170 60% 40%));
+    --gradient-success: linear-gradient(135deg, hsl(165 82% 55%), hsl(165 85% 65%));
+    --gradient-purple: linear-gradient(135deg, hsl(170 40% 18%), hsl(165 82% 55%));
+    --gradient-pink: linear-gradient(135deg, hsl(165 90% 55%), hsl(170 70% 45%));
+    --gradient-hyper: linear-gradient(135deg, hsl(170 50% 6%), hsl(168 45% 12%), hsl(165 50% 20%));
+    --gradient-blob: radial-gradient(ellipse at 30% 20%, hsl(165 55% 35% / 0.5), transparent 50%),
+                     radial-gradient(ellipse at 70% 60%, hsl(165 65% 40% / 0.4), transparent 50%),
+                     radial-gradient(ellipse at 50% 80%, hsl(170 50% 30% / 0.35), transparent 50%);
+    
+    --shadow-glow: 0 10px 40px -10px hsl(165 82% 55% / 0.5);
+    --shadow-success: 0 10px 40px -10px hsl(165 82% 55% / 0.5);
+    --shadow-pink: 0 10px 40px -10px hsl(165 90% 55% / 0.5);
+    --shadow-mint: 0 0 80px hsl(165 85% 60% / 0.25);
+
+    --sidebar-background: 170 45% 8%;
+    --sidebar-foreground: 165 25% 90%;
+    --sidebar-primary: 165 82% 55%;
+    --sidebar-primary-foreground: 170 50% 8%;
+    --sidebar-accent: 170 40% 14%;
+    --sidebar-accent-foreground: 165 25% 90%;
+    --sidebar-border: 170 35% 15%;
+    --sidebar-ring: 165 82% 55%;
+
+    --chart-1: 165 82% 55%;
+    --chart-2: 170 60% 45%;
+    --chart-3: 165 90% 60%;
+    --chart-4: 170 45% 30%;
+    --chart-5: 168 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hyperliquid blob animation effect */
+@layer utilities {
+  .blob-texture {
+    position: relative;
+  }
+  
+  .blob-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-blob);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .glow-mint {
+    box-shadow: var(--shadow-mint);
+  }
+
+  .text-gradient-mint {
+    background: linear-gradient(135deg, hsl(165 82% 55%), hsl(165 85% 70%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-glow {
+    border-color: hsl(165 82% 55% / 0.3);
+    box-shadow: 0 0 20px hsl(165 82% 55% / 0.1), inset 0 0 20px hsl(165 82% 55% / 0.05);
+  }
+
+  .card-hyper {
+    background: linear-gradient(135deg, hsl(170 45% 10% / 0.9), hsl(170 40% 8% / 0.95));
+    border: 1px solid hsl(165 82% 55% / 0.15);
+    backdrop-filter: blur(10px);
+  }
+}

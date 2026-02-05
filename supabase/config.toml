@@ -1,0 +1,58 @@
+project_id = "lqfbpdbcmhaovcuufwxp"
+
+[functions.complete-trade-cycles]
+verify_jwt = false
+
+[functions.start-cycle]
+verify_jwt = true
+
+[functions.withdraw-cycle]
+verify_jwt = true
+
+[functions.get-cycle-info]
+verify_jwt = true
+
+[functions.get-cycle-history]
+verify_jwt = true
+
+[functions.admin-get-all-cycles]
+verify_jwt = true
+
+[functions.admin-complete-cycle]
+verify_jwt = true
+
+[functions.admin-manage-penalty]
+verify_jwt = true
+
+[functions.telegram-auth]
+verify_jwt = false
+
+[functions.coinglass-whale-position]
+verify_jwt = true
+
+[functions.coinglass-whale-alerts]
+verify_jwt = true
+
+[functions.save-whale-pnl-snapshot]
+verify_jwt = false
+
+[functions.set-password]
+verify_jwt = true
+
+[functions.login-with-password]
+verify_jwt = false
+
+[functions.mypayverse-wallet]
+verify_jwt = true
+
+[functions.admin-logout-user]
+verify_jwt = false
+
+[functions.backfill-mypayverse-deposits]
+verify_jwt = true
+
+[functions.process-withdrawal]
+verify_jwt = true
+
+[functions.sync-mypayverse-deposits]
+verify_jwt = true
